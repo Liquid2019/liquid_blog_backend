@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liquid.mapper.CommentMapper">
+    <insert id="createComment" parameterType="comment">
+        insert into comment values(#{id},#{name},#{content},#{host},#{agent},#{time})
+    </insert>
+    <delete id="deleteComment" parameterType="Integer">
+        delete from comment where id=#{id}
+    </delete>
+    <select id="findAllComment" resultType="comment">
+        select * from comment;
+    </select>
+</mapper>
