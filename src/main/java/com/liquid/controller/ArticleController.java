@@ -26,10 +26,6 @@ public class ArticleController {
     @RequestMapping(value = "/findAllArticle",method = RequestMethod.POST)
     @ResponseBody
     public ApiResult<List<Article>> findAll(HttpServletRequest request) throws JsonProcessingException {
-        String host = request.getHeader("host");
-        String agent = request.getHeader("user-agent");
-        System.out.println(host);
-        System.out.println(agent);
         List<Article> articleList = articleService.findAll();
         if(ObjectUtils.isEmpty(articleList)){
             return ApiResult.failed("查询失败");
