@@ -21,8 +21,8 @@ import java.util.List;
 @RequestMapping("/admin")
 public class AdminController {
 
-    private final String USERNAME="nymnym";
-    private final String PASSWORD="nymnym";
+    private final String USERNAME="admin";
+    private final String PASSWORD="admin";
 
     @RequestMapping(value = "/checkAdmin",method = RequestMethod.POST)
     @ResponseBody
